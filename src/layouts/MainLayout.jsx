@@ -4,7 +4,7 @@ const MainLayout = () => {
   return (
     <div>
       {/* navbar */}
-      <nav>
+      <nav className="bg-career-primary">
         <Navbar></Navbar>
       </nav>
       {/* banner */}
