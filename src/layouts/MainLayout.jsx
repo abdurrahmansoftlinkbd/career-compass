@@ -12,7 +12,7 @@ const MainLayout = () => {
       {/* dynamicSection */}
       <Outlet></Outlet>
       {/* footer */}
-      <footer className="bg-career-primary mt-24 py-5">
+      <footer className="bg-career-primary mt-24 py-5 font-poppins">
         <Footer></Footer>
       </footer>
     </div>
