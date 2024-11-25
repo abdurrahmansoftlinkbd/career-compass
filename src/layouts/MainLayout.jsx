@@ -12,7 +12,7 @@ const MainLayout = () => {
       {/* dynamicSection */}
       <Outlet></Outlet>
       {/* footer */}
-      <footer>
+      <footer className="bg-base-200">
         <Footer></Footer>
       </footer>
     </div>

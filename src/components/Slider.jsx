@@ -13,8 +13,8 @@ const Slider = () => {
             ❯
           </a>
         </div>
-        <div className="absolute w-4/5 top-28 left-28">
-          <h1 className="text-white font-poppins text-7xl font-bold">
+        <div className="absolute w-7/12 md:w-3/4 lg:w-4/5 top-4 md:top-28 left-20 md:left-28">
+          <h1 className="text-white font-poppins text-2xl md:text-4xl lg:text-7xl font-bold">
             Explore Career Counseling Services
           </h1>
           <p className="text-white font-inter mt-4 w-4/5">
@@ -38,8 +38,8 @@ const Slider = () => {
             ❯
           </a>
         </div>
-        <div className="absolute w-4/5 top-40 left-28">
-          <h1 className="text-white font-poppins text-7xl font-bold">
+        <div className="absolute w-7/12 md:w-3/4 lg:w-4/5 top-20 md:top-28 left-20 md:left-28">
+          <h1 className="text-white font-poppins text-2xl md:text-4xl lg:text-7xl font-bold">
             Personalized Career Advice
           </h1>
           <p className="text-white font-inter mt-4 w-4/5">
@@ -60,8 +60,8 @@ const Slider = () => {
             ❯
           </a>
         </div>
-        <div className="absolute w-4/5 top-40 left-28">
-          <h1 className="text-white font-poppins text-7xl font-bold">
+        <div className="absolute w-7/12 md:w-3/4 lg:w-4/5 top-20 md:top-28 left-20 md:left-28">
+          <h1 className="text-white font-poppins text-2xl md:text-4xl lg:text-7xl font-bold">
             Build Your Dream Career
           </h1>
           <p className="text-white font-inter mt-4 w-4/5">
