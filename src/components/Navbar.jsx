@@ -3,8 +3,15 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const links = (
     <>
-      <Link to="/">Home</Link>
-      <Link to="/profile">My Profile</Link>
+      <Link className="hover:underline" to="/">
+        Home
+      </Link>
+      <Link className="hover:underline" to="/profile">
+        Services
+      </Link>
+      <Link className="hover:underline" to="/profile">
+        My Profile
+      </Link>
     </>
   );
 

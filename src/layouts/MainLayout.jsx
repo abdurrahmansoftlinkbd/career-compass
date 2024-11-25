@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 const MainLayout = () => {
@@ -7,9 +8,8 @@ const MainLayout = () => {
       <nav className="bg-career-primary">
         <Navbar></Navbar>
       </nav>
-      {/* banner */}
-
-      <h2>MainLayout</h2>
+      {/* dynamicSection */}
+      <Outlet></Outlet>
     </div>
   );
 };
