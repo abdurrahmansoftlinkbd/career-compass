@@ -6,6 +6,10 @@ export default {
       colors: {
         "career-primary": "#2A73CC",
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [require("daisyui")],
