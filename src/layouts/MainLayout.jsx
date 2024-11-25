@@ -10,6 +10,7 @@ const MainLayout = () => {
       </nav>
       {/* dynamicSection */}
       <Outlet></Outlet>
+      {/* footer */}
     </div>
   );
 };
