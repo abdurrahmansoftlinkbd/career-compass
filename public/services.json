@@ -1,6 +1,7 @@
 [
   {
-    "image": "https://i.ibb.co/example1.jpg",
+    "id": "1",
+    "image": "https://i.ibb.co.com/zxhXLWg/dylan-gillis-Kdeq-A3a-Tn-BY-unsplash.jpg",
     "serviceName": "Career Counseling Sessions",
     "category": "Online",
     "description": "Personalized career counseling sessions to help you navigate your career path with confidence and clarity.",
@@ -10,7 +11,8 @@
     "rating": 4.8
   },
   {
-    "image": "https://i.ibb.co/example2.jpg",
+    "id": "2",
+    "image": "https://i.imghippo.com/files/DU7694Pko.jpg",
     "serviceName": "Resume Review",
     "category": "Group",
     "description": "Get expert feedback on your resume to ensure it stands out to potential employers.",
@@ -20,7 +22,8 @@
     "rating": 4.6
   },
   {
-    "image": "https://i.ibb.co/example3.jpg",
+    "id": "3",
+    "image": "https://i.imghippo.com/files/mCPQ4282JM.jpg",
     "serviceName": "Mock Interview Practice",
     "category": "Offline",
     "description": "Participate in a one-on-one mock interview with tailored feedback to improve your interview skills.",
@@ -30,7 +33,8 @@
     "rating": 4.9
   },
   {
-    "image": "https://i.ibb.co/example4.jpg",
+    "id": "4",
+    "image": "https://i.imghippo.com/files/BDm5905IHw.jpg",
     "serviceName": "Career Path Analysis",
     "category": "Online",
     "description": "Explore different career paths based on your skills, interests, and market demand.",
@@ -40,7 +44,8 @@
     "rating": 4.7
   },
   {
-    "image": "https://i.ibb.co/example5.jpg",
+    "id": "5",
+    "image": "https://i.imghippo.com/files/RmUG1256Ueg.jpg",
     "serviceName": "Skill Development Workshop",
     "category": "Group",
     "description": "Participate in workshops focused on enhancing specific skills required in your field.",
@@ -50,7 +55,8 @@
     "rating": 4.5
   },
   {
-    "image": "https://i.ibb.co/example6.jpg",
+    "id": "6",
+    "image": "https://i.ibb.co.com/LY18hZV/austin-distel-w-D1-LRb9-Oe-Eo-unsplash.jpg",
     "serviceName": "Job Market Trends Analysis",
     "category": "Online",
     "description": "Stay updated with the latest job market trends and strategies for success.",
