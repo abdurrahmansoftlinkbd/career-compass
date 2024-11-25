@@ -7,9 +7,6 @@ const Navbar = () => {
         Home
       </Link>
       <Link className="hover:underline" to="/profile">
-        Services
-      </Link>
-      <Link className="hover:underline" to="/profile">
         My Profile
       </Link>
     </>
