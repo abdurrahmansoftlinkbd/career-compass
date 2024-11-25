@@ -23,7 +23,7 @@ const Slider = () => {
             step of your professional journey, offering personalized advice,
             insights, and resources.
           </p>
-          <button className="btn bg-career-primary border-career-primary mt-6 rounded-full uppercase text-white hover:bg-blue-400 hover:border-blue-400">
+          <button className="btn font-poppins bg-career-primary border-career-primary mt-6 rounded-full uppercase text-white hover:bg-blue-400 hover:border-blue-400">
             Get Started <FaArrowRight />
           </button>
         </div>
