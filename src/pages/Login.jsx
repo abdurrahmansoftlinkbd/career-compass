@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
 
 const Login = () => {
+  const { handleGoogleLogin } = useContext(AuthContext);
+
   return (
     <div className="mt-24 font-poppins">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -42,7 +46,10 @@ const Login = () => {
             </div>
             <div className="divider">Or</div>
             <div className="form-control my-1">
-              <button className="btn bg-base-200 hover:bg-base-100">
+              <button
+                onClick={handleGoogleLogin}
+                className="btn bg-base-200 hover:bg-base-100"
+              >
                 <FcGoogle className="text-3xl" /> Login with Google
               </button>
             </div>
