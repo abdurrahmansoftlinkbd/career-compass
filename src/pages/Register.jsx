@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
@@ -8,8 +8,6 @@ const Register = () => {
     useContext(AuthContext);
 
   const navigate = useNavigate();
-
-  const [error, setError] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();

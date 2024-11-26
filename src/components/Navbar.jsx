@@ -70,11 +70,15 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-3">
-        <div className="avatar">
-          <div className="w-14 rounded-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        {user && user?.email ? (
+          <div className="avatar">
+            <div className="w-14 rounded-full">
+              <img title={user?.displayName} src={user?.photoURL} />
+            </div>
           </div>
-        </div>
+        ) : (
+          ""
+        )}
         {user && user?.email ? (
           <button onClick={handleLogout} className="btn">
             Log out
