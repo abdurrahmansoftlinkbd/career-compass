@@ -6,7 +6,7 @@ Welcome to **Career Compass**, your trusted partner in navigating the path to pr
 
 Explore the website here: [Career Compass](https://b10-a9-career-compass.web.app/)
 
-## 📌 Features and Characteristics
+## Features and Characteristics
 
 1. **Interactive Career Counseling Services**
 
