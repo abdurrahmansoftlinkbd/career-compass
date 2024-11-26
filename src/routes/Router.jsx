@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import ServiceDetails from "../pages/ServiceDetails";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/serviceDetails/:id",
-        element: <ServiceDetails></ServiceDetails>,
+        element: (
+          <PrivateRoute>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+        ),
         loader: async ({ params }) => {
           const serviceDetailsRes = await fetch("../services.json");
           const serviceDetails = await serviceDetailsRes.json();

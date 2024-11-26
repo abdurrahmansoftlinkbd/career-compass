@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
 
 const Navbar = () => {
@@ -7,12 +7,22 @@ const Navbar = () => {
 
   const links = (
     <>
-      <Link className="hover:underline" to="/">
+      <NavLink
+        className={({ isActive }) =>
+          `font-medium ${isActive ? "font-bold underline" : "hover:underline"}`
+        }
+        to="/"
+      >
         Home
-      </Link>
-      <Link className="hover:underline" to="/profile">
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          `font-medium ${isActive ? "font-bold underline" : "hover:underline"}`
+        }
+        to="/profile"
+      >
         My Profile
-      </Link>
+      </NavLink>
     </>
   );
 
