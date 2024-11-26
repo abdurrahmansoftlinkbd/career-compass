@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-  const { handleRegister, setUser, updateUserProfile } =
+  const { handleRegister, setUser, updateUserProfile, handleGoogleLogin } =
     useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -17,6 +17,13 @@ const Register = () => {
     const photoUrl = e.target.photourl.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
+
+    if (!passwordRegex.test(password)) {
+      toast.error("At least an uppercase and a lowercase!");
+      return;
+    }
+
     handleRegister(email, password)
       .then((result) => {
         setUser(result.user);
@@ -107,7 +114,10 @@ const Register = () => {
             </div>
             <div className="divider">Or</div>
             <div className="form-control my-1">
-              <button className="btn bg-base-200 hover:bg-base-100">
+              <button
+                onClick={handleGoogleLogin}
+                className="btn bg-base-200 hover:bg-base-100"
+              >
                 <FcGoogle className="text-3xl" /> Signup with Google
               </button>
             </div>

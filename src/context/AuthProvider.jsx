@@ -35,6 +35,7 @@ const AuthProvider = ({ children }) => {
   const handleGoogleLogin = () => {
     setLoading(true);
     signInWithPopup(auth, googleProvider);
+    toast.success("Welcome! Your account has been created successfully.");
   };
 
   const updateUserProfile = (updatedProfile) => {
