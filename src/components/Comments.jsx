@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const Comments = () => {
   const [comment, setComment] = useState("");
@@ -8,6 +9,7 @@ const Comments = () => {
     if (comment.trim()) {
       setComments([...comments, comment]);
       setComment("");
+      toast.success("Thank you! Your comment has been submitted successfully.");
     }
   };
   return (

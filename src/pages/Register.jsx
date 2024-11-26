@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const { handleRegister, setUser, updateUserProfile } =
@@ -20,6 +21,9 @@ const Register = () => {
         setUser(result.user);
         updateUserProfile({ displayName: name, photoURL: photoUrl })
           .then(() => {
+            toast.success(
+              `Welcome ${name}! Your account has been created successfully.`
+            );
             navigate("/");
           })
           .catch((err) => {
