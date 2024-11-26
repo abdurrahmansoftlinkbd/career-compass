@@ -14,7 +14,6 @@ const Register = () => {
     const password = e.target.password.value;
     handleRegister(email, password)
       .then((result) => {
-        console.log(result.user);
         setUser(result.user);
       })
       .catch((error) => {

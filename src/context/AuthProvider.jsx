@@ -19,11 +19,11 @@ const AuthProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
 
   const handleRegister = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password);
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const handleLogin = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password);
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   const handleGoogleLogin = () => {
@@ -31,7 +31,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const handleLogout = () => {
-    signOut(auth);
+    return signOut(auth);
   };
 
   const authInfo = {
@@ -45,7 +45,7 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log(currentUser);
+      setUser(currentUser);
 
       return () => {
         unSubscribe();

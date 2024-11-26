@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
 
 const Navbar = () => {
+  const { user, handleLogout } = useContext(AuthContext);
+
   const links = (
     <>
       <Link className="hover:underline" to="/">
@@ -48,6 +52,7 @@ const Navbar = () => {
           className="text-base md:text-2xl uppercase text-white font-poppins font-bold"
         >
           Career Compass
+          {user && user?.email}
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -61,9 +66,15 @@ const Navbar = () => {
             <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
           </div>
         </div>
-        <Link to="/login" className="btn">
-          Login
-        </Link>
+        {user && user?.email ? (
+          <button onClick={handleLogout} className="btn">
+            Log out
+          </button>
+        ) : (
+          <Link to="/login" className="btn">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
