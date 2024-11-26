@@ -1,11 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 import Slider from "../components/Slider";
 import ServiceCard from "../components/ServiceCard";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const services = useLoaderData();
   return (
     <>
+      <Helmet>
+        <title>Career Compass | Home</title>
+      </Helmet>
       {/* slider */}
       <header>
         <Slider></Slider>

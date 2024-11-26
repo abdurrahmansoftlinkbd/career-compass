@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { handleGoogleLogin, handleLogin, setUser } = useContext(AuthContext);
@@ -31,6 +32,9 @@ const Login = () => {
 
   return (
     <div className="mt-24 font-poppins">
+      <Helmet>
+        <title>Career Compass | Login</title>
+      </Helmet>
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <form onSubmit={handleSubmit} className="card-body">

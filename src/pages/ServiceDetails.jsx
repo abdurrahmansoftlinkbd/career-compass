@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Comments from "../components/Comments";
+import { Helmet } from "react-helmet-async";
 
 const ServiceDetails = () => {
   const {
@@ -15,6 +16,9 @@ const ServiceDetails = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{serviceName}</title>
+      </Helmet>
       <div className="hero container w-11/12 mx-auto mt-24 font-poppins">
         <div className="hero-content flex-col lg:flex-row">
           <img
