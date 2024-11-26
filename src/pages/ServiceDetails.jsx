@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Comments from "../components/Comments";
 
 const ServiceDetails = () => {
   const {
@@ -43,6 +44,7 @@ const ServiceDetails = () => {
           </div>
         </div>
       </div>
+      <Comments></Comments>
     </>
   );
 };
