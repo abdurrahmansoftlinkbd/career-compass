@@ -62,7 +62,6 @@ const Navbar = () => {
           className="text-base md:text-2xl uppercase text-white font-poppins font-bold"
         >
           Career Compass
-          {user && user?.email}
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
