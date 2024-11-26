@@ -4,14 +4,20 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
 
 const Login = () => {
-  const { handleGoogleLogin, handleLogin } = useContext(AuthContext);
+  const { handleGoogleLogin, handleLogin, setUser } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
-    handleLogin(email, password);
+    handleLogin(email, password)
+      .then((result) => {
+        setUser(result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
 
   return (
