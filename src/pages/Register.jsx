@@ -1,19 +1,60 @@
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
 
 const Register = () => {
+  const { handleRegister } = useContext(AuthContext);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const photoUrl = e.target.photourl.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(name, photoUrl, email, password);
+    handleRegister(email, password);
+  };
+
   return (
     <div className="mt-24 font-poppins">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <form className="card-body">
-            <h2 className="text-3xl text-career-primary">Welcome Back</h2>
+          <form onSubmit={handleSubmit} className="card-body">
+            <h2 className="text-3xl text-career-primary text-center font-semibold">
+              Create an account
+            </h2>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo URL</span>
+              </label>
+              <input
+                type="text"
+                name="photourl"
+                placeholder="url"
+                className="input input-bordered"
+                required
+              />
+            </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
               <input
                 type="email"
+                name="email"
                 placeholder="email"
                 className="input input-bordered"
                 required
@@ -25,6 +66,7 @@ const Register = () => {
               </label>
               <input
                 type="password"
+                name="password"
                 placeholder="password"
                 className="input input-bordered"
                 required
@@ -37,19 +79,19 @@ const Register = () => {
             </div>
             <div className="form-control mt-3 mb-1">
               <button className="btn bg-career-primary text-white border-career-primary hover:bg-blue-400 hover:border-blue-400">
-                Login
+                Register
               </button>
             </div>
             <div className="divider">Or</div>
             <div className="form-control my-1">
               <button className="btn bg-base-200 hover:bg-base-100">
-                <FcGoogle className="text-3xl" /> Login with Google
+                <FcGoogle className="text-3xl" /> Signup with Google
               </button>
             </div>
             <p className="text-center mt-4">
-              Dont have an account?{" "}
+              Already have an account?{" "}
               <Link to="/register" className="text-blue-500">
-                Register
+                Login
               </Link>
             </p>
           </form>
