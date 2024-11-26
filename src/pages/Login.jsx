@@ -11,7 +11,9 @@ const Login = () => {
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <form className="card-body">
-            <h2 className="text-3xl text-career-primary">Welcome Back</h2>
+            <h2 className="text-3xl text-career-primary text-center font-semibold">
+              Welcome Back
+            </h2>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
