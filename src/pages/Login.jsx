@@ -4,13 +4,21 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
 
 const Login = () => {
-  const { handleGoogleLogin } = useContext(AuthContext);
+  const { handleGoogleLogin, handleLogin } = useContext(AuthContext);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+    handleLogin(email, password);
+  };
 
   return (
     <div className="mt-24 font-poppins">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <form className="card-body">
+          <form onSubmit={handleSubmit} className="card-body">
             <h2 className="text-3xl text-career-primary text-center font-semibold">
               Welcome Back
             </h2>
@@ -20,6 +28,7 @@ const Login = () => {
               </label>
               <input
                 type="email"
+                name="email"
                 placeholder="email"
                 className="input input-bordered"
                 required
@@ -31,6 +40,7 @@ const Login = () => {
               </label>
               <input
                 type="password"
+                name="password"
                 placeholder="password"
                 className="input input-bordered"
                 required

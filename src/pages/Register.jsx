@@ -90,7 +90,7 @@ const Register = () => {
             </div>
             <p className="text-center mt-4">
               Already have an account?{" "}
-              <Link to="/register" className="text-blue-500">
+              <Link to="/login" className="text-blue-500">
                 Login
               </Link>
             </p>
