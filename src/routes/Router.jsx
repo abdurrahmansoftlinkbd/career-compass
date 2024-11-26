@@ -5,6 +5,8 @@ import ServiceDetails from "../pages/ServiceDetails";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
+import MyProfile from "../pages/MyProfile";
+import Error from "../pages/Error";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/myProfile",
+        element: <MyProfile></MyProfile>,
+      },
+      {
+        path: "*",
+        element: <Error></Error>,
       },
     ],
   },

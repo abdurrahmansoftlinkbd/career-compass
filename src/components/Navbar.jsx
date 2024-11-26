@@ -19,7 +19,7 @@ const Navbar = () => {
         className={({ isActive }) =>
           `font-medium ${isActive ? "font-bold underline" : "hover:underline"}`
         }
-        to="/profile"
+        to="/myProfile"
       >
         My Profile
       </NavLink>
