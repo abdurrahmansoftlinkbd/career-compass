@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
 
 const Register = () => {
-  const { handleRegister } = useContext(AuthContext);
+  const { handleRegister, setUser } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,8 +12,14 @@ const Register = () => {
     const photoUrl = e.target.photourl.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(name, photoUrl, email, password);
-    handleRegister(email, password);
+    handleRegister(email, password)
+      .then((result) => {
+        console.log(result.user);
+        setUser(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
