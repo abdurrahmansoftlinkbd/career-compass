@@ -33,3 +33,26 @@ Explore the website here: [Career Compass](https://b10-a9-career-compass.web.app
 - **Frontend**: React, React Router, Tailwind CSS, DaisyUI
 - **Authentication**: Firebase Authentication
 - **Hosting**: Firebase Hosting
+
+---
+
+## Dependencies
+
+The following dependencies were used in this project:
+
+```json
+"dependencies": {
+    "firebase": "^11.0.2",
+    "localforage": "^1.10.0",
+    "match-sorter": "^8.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^7.0.1",
+    "sort-by": "^1.2.0",
+    "swiper": "^11.1.15"
+}
+```
